@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { MyContext } from './redux';
 
 import SiderButton from './components/sider_button';
+import Test from './components/stash_page';
+import { Test2 } from './components/stash_page/test2';
 
 function App() {
   return (
@@ -22,7 +25,11 @@ function App() {
         </a>
       </header> */}
       123
-      <SiderButton></SiderButton>
+      <MyContext.Provider value={{name: "JJ"}}>
+        <Test></Test>
+      </MyContext.Provider>
+      {/* <SiderButton></SiderButton> */}
+      <Test2></Test2>
     </div>
   );
 }
